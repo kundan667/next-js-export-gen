@@ -1,6 +1,5 @@
 import { FC } from "react";
 import constants from "../constants"
-import Button from '@mui/material/Button';
 
 const headerData = constants.HEADER_DATA
 interface HeaderProps {

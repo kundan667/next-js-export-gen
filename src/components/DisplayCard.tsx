@@ -1,5 +1,4 @@
 import { FC } from "react";
-import constants from "../constants";
 
 interface DisplayCardProps {
     text: string

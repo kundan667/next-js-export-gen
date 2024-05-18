@@ -1,20 +1,26 @@
 "use client"
 import { FC, useEffect, useState } from "react";
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
-import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
 import constants from "@/constants";
 
-const SERVICES_DATA = constants.SERVICES_DATA;
-
+interface ServicesItem {
+    id: string;
+    name: string;
+    details: string;
+    img: string;
+}
+const SERVICES_DATA: ServicesItem[] = [...constants.SERVICES_DATA];
 interface ServiceProps {
     // text: string
 }
 
 const Services: FC<ServiceProps> = (props) => {
     const [activeIndex, setActiveIndex] = useState(0);
-    const [serviceDetails, setServiceDetails] = useState({});
+    const [serviceDetails, setServiceDetails] = useState<ServicesItem>({
+        id: '',
+        name: '',
+        details: '',
+        img: '',
+    });
     useEffect(() => {
         setServiceDetails({ ...SERVICES_DATA[activeIndex] });
     }, [activeIndex])

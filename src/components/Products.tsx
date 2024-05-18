@@ -2,8 +2,14 @@
 import { FC, useEffect, useState } from "react";
 import constants from "@/constants";
 
-const PRODUCTS_DATA = constants.PRODUCTS_DATA;
+interface ProductsItem {
+    id: string;
+    productName: string;
+    header: string;
+    tabs: any[];
+}
 
+const PRODUCTS_DATA: ProductsItem[] = [...constants.PRODUCTS_DATA];
 interface ProductsProps {
     // text: string
 }
@@ -11,9 +17,14 @@ interface ProductsProps {
 const Products: FC<ProductsProps> = (props) => {
     const [activeIndex, setActiveIndex] = useState(0);
     const [activeSubIndex, setActiveSubIndex] = useState(0);
-    const [productDetails, setProductDetails] = useState({});
+    const [productDetails, setProductDetails] = useState<ProductsItem>({
+        id: '',
+        productName: '',
+        header: '',
+        tabs: [],
+    });
     useEffect(() => {
-        setProductDetails({ ...PRODUCTS_DATA[activeIndex] });
+        setProductDetails(PRODUCTS_DATA[activeIndex]);
         // console.log("hjj", PRODUCTS_DATA[activeIndex]);
     }, [activeIndex]);
     useEffect(() => {

@@ -2,8 +2,16 @@
 import { FC, useEffect, useState } from "react";
 import constants from "@/constants";
 
-const COUNTRIES_DATA = constants.COUNTRIES_DATA;
-console.log("COUNTRIES_DATA:", COUNTRIES_DATA);
+
+interface CountryData {
+    // text: string
+    id: string;
+    name: string;
+    active: boolean;
+    data: any[];
+}
+
+const COUNTRIES_DATA: CountryData[] = [...constants.COUNTRIES_DATA];
 
 interface CountryProps {
     // text: string
@@ -11,11 +19,9 @@ interface CountryProps {
 
 const Country: FC<CountryProps> = (props) => {
     const [activeIndex, setActiveIndex] = useState(0);
-    const [data, setData] = useState([]);
-    const [selectedValue, setSelectedValue] = useState();
+    const [data, setData] = useState<CountryData[]>([]);
 
     const handleTabClick = (item: any, index: any) => {
-        // setData(item.data);
         setActiveIndex(index);
     }
 
@@ -25,7 +31,6 @@ const Country: FC<CountryProps> = (props) => {
     }
 
     useEffect(() => {
-        // if (activeIndex !== 0) return
         setData(COUNTRIES_DATA[activeIndex].data);
     }, [activeIndex])
 
@@ -38,7 +43,7 @@ const Country: FC<CountryProps> = (props) => {
             <div className="sm:grid sm:grid-cols-country justify-between items-start my-12">
                 <div className="hidden sm:block">
                     {
-                        COUNTRIES_DATA.map((item, index) => (
+                        COUNTRIES_DATA.map((item: any, index: any) => (
                             <div key={item.id}
                                 onClick={() => handleTabClick(item, index)}
                                 className={`relative text-sm cursor-pointer px-6 py-6 text-gray-500 border-amber-500 ${activeIndex === index ? 'border-y border-l rounded-s-2xl	p-class' : ''}`}>
@@ -51,7 +56,7 @@ const Country: FC<CountryProps> = (props) => {
                     <div className="block sm:hidden">
                         <select className="select select-bordered w-full max-w-xs" onChange={handleTabSelection}>
                             {
-                                COUNTRIES_DATA.map((item, index) => (
+                                COUNTRIES_DATA.map((item: any, index: any) => (
                                     <option key={item.id}
                                         value={item.id}
                                         // onClick={() => handleTabClick(item, index)}
@@ -65,7 +70,7 @@ const Country: FC<CountryProps> = (props) => {
                     <img src="/assets/map.png" alt="" className="" />
                     <div className="grid grid-col-1 sm:grid-cols-3 gap-4">
                         {
-                            data.map((item, i) => (
+                            data.map((item: any, i: any) => (
                                 <div key={i} className="flex gap-2 items-center">
                                     <img src="/assets/check.png" alt="check" width={15} />
                                     <span>{item}</span>

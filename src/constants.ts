@@ -1,6 +1,11 @@
 import { v4 as uuid } from "uuid";
 
-const HEADER_DATA = [
+interface HeaderItem {
+    id: string;
+    name: string;
+    details: [];
+}
+const HEADER_DATA: HeaderItem[] = [
     {
         id: uuid(),
         name: 'solutions',
@@ -28,7 +33,13 @@ const HEADER_DATA = [
     }
 ]
 
-const CARD_DATA = [
+interface CardItem {
+    id: string;
+    name: string;
+    icon: any[];
+    details: string;
+}
+const CARD_DATA: CardItem[] = [
     {
         id: uuid(),
         name: 'platform',
@@ -49,7 +60,11 @@ const CARD_DATA = [
     },
 ]
 
-const CAROUSEL_DATA = [
+interface CarouselItem {
+    id: string;
+    image: string;
+}
+const CAROUSEL_DATA: CarouselItem[] = [
     {
         id: uuid(),
         image: '/assets/c-1.png'
@@ -72,7 +87,13 @@ const CAROUSEL_DATA = [
     },
 ]
 
-const COUNTRIES_DATA = [
+interface CountriesItem {
+    id: string;
+    name: string;
+    active: boolean;
+    data: any[];
+}
+const COUNTRIES_DATA: CountriesItem[] = [
     {
         id: 'country-data-1',
         name: 'ALL DATA',
@@ -133,7 +154,13 @@ const COUNTRIES_DATA = [
     }
 ]
 
-const SERVICES_DATA = [
+interface ServicesItem {
+    id: string;
+    name: string;
+    details: string;
+    img: string;
+}
+const SERVICES_DATA: ServicesItem[] = [
     {
         id: uuid(),
         name: 'IMPORTER',
@@ -178,7 +205,13 @@ const SERVICES_DATA = [
     }
 ]
 
-const PRODUCTS_DATA = [
+interface ProductsItem {
+    id: string;
+    productName: string;
+    header: string;
+    tabs: any[];
+}
+const PRODUCTS_DATA: ProductsItem[] = [
     {
         id: 'product-1',
         productName: 'PLATFORM',
@@ -256,7 +289,12 @@ const PRODUCTS_DATA = [
     }
 ]
 
-const FOOTER_DATA = [
+interface FooerItem {
+    id: string;
+    name: string;
+    tabs: any[];
+}
+const FOOTER_DATA: FooerItem[] = [
     {
         id: uuid(),
         name: 'MARKET INSIDE',
