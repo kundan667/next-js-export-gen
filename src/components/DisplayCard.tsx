@@ -1,23 +1,21 @@
 import { FC } from "react";
 
 interface DisplayCardProps {
-    text: string
+    data: any
 }
 
 const DisplayCard: FC<DisplayCardProps> = (props) => {
 
     return (
-        <div className="bg-zinc-950 text-white p-3 rounded-md">
-            <div className="bg-amber-500 rounded-md p-2">
-                <div className="uppercase text-lg">Platform</div>
-                <p className="text-sm">this is sample text data</p>
+        <div className="bg-zinc-950 text-white p-8 rounded-lg">
+            <div className="bg-amber-500 rounded-lg p-6 mb-12">
+                <div className="uppercase text-lg font-bold">{props.data.productName}</div>
+                <p className="text-sm">{props.data.header}</p>
             </div>
-            <div className="grid display-card-grid">
-
-                <div><i className="fa-solid fa-network-wired"></i></div>
-                <p>this is sample text data this is sample text data</p>
+            <div className="grid grid-cols-display-card gap-4">
+                <img src={props.data.img} alt="images" />
+                <p className="pl-4 text-[0.85em]">{props.data.desc}</p>
             </div>
-
         </div>
     )
 }

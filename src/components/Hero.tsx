@@ -22,7 +22,8 @@ const Hero: FC<HeroProps> = (props) => {
                     <div className="text-xl md:text-2xl font-bold mb-4">GROW YOUR BUSINESS</div>
                     <div className="flex ">
                         <input type="text" className="text-base px-4 md:px-6 py-2 border border-slate-300 rounded mr-4" placeholder="ENTER YOUR EMAIL" />
-                        <button className="px-4 md:px-6 py-2 bg-gray-500 rounded text-sm font-bold text-white">FREE TRAIL</button>
+                        {/* <button className="px-4 md:px-6 py-2 bg-gray-500 rounded text-sm font-bold text-white">FREE TRAIL</button> */}
+                        <button className="uppercase rounded border font-bold btn bg-gray-500 text-white">FREE TRAIL</button>
                     </div>
                 </div>
                 <div className="flex flex-wrap my-6">

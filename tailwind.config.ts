@@ -18,6 +18,7 @@ const config: Config = {
 
         // Complex site-specific column configuration
         'country': '25% 75%',
+        'display-card': '30% 70%'
       }
     },
   },

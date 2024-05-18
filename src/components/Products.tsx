@@ -25,18 +25,12 @@ const Products: FC<ProductsProps> = (props) => {
     });
     useEffect(() => {
         setProductDetails(PRODUCTS_DATA[activeIndex]);
-        // console.log("hjj", PRODUCTS_DATA[activeIndex]);
     }, [activeIndex]);
-    useEffect(() => {
-
-        // console.log(productDetails.tabs[0]);
-    }, [productDetails]);
 
     const handleTabSelection = (e: any) => {
         let index = productDetails?.tabs?.findIndex(i => i.id === e.target.value)
         setActiveSubIndex(index);
     }
-
 
     return (
         <div className="w-full sm:w-5/6 mx-auto mt-4 px-8 sm:px-0 sm:pb-12">
@@ -82,7 +76,7 @@ const Products: FC<ProductsProps> = (props) => {
             <div className="block sm:hidden">
                 {
                     PRODUCTS_DATA.map((item: any, i: any) => (
-                        <div className="collapse !rounded-lg my-4">
+                        <div key={item.id} className="collapse !rounded-lg my-4">
                             <input type="radio" name="my-accordion-1" className="bg-base-200" defaultChecked={i == 0} onClick={() => setActiveIndex(i)} />
                             <div className="collapse-title text-xl text-amber-500 border border-gray-300 font-medium bg-base-200 !rounded-lg">
                                 {item.productName}

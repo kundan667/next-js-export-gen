@@ -1,29 +1,117 @@
 import { v4 as uuid } from "uuid";
+const PRODUCTS_DATA = [
+    {
+        id: 'product-1',
+        productName: 'PLATFORM',
+        header: 'Technological advancements provide a competitive edge',
+        img: '/assets/platform.png',
+        desc: 'Ex minim ea nostrud sint nostrud dolore magna duis mincat veniam a ',
+        tabs: [
+            {
+                id: 'tabs-1',
+                tabName: 'Visualise view',
+                desc: 'Gather information on international trade in a visually appealing way. Learn about the market trends easily and get all the essential information on the import and export of a country in the form of interactive graphics.',
+                img: '/assets/products_1.png'
+            },
+            {
+                id: 'tabs-2',
+                tabName: 'view profile',
+                desc: 'Ea tempor Lorem excepteur eu aute qui ipsum est cupidatat labore consectetur cillum magna. Pariatur dolor veniam eiusmod veniam quis officia do minim dolor laborum in fugiat. Et tempor Lorem incididunt esse fugiat proident eiusmod magna elit excepteur in aliquip. Eu id enim mollit amet cupidatat consequat dolor et cupidatat in qui consequat deserunt. Est minim id eiusmod laboris culpa cillum mollit commodo fugiat duis dolor.',
+                img: '/assets/products_1.png'
+            },
+            {
+                id: 'tabs-3',
+                tabName: 'quick view',
+                desc: 'Exercitation dolore qui non qui ad minim tempor voluptate ut nostrud consequat magna Lorem quis. Enim tempor sit reprehenderit consectetur anim ea labore labore. Amet non amet id culpa amet deserunt duis eiusmod in eiusmod consequat officia.',
+                img: '/assets/products_1.png'
+            }
+        ]
+    },
+    {
+        id: 'product-2',
+        productName: 'API',
+        header: 'Aliqua sint aliquip ea exercitation id culpa mollit dolor anim.',
+        img: '/assets/api.png',
+        desc: 'mpor Lorem excepteur eu aute qui ipsum est cupidatat labore',
+        tabs: [
+            {
+                id: 'tabs-4',
+                tabName: 'Visualise view',
+                desc: 'Gather information on international trade in a visually appealing way. Learn about the market trends easily and get all the essential information on the import and export of a country in the form of interactive graphics.',
+                img: '/assets/products_1.png'
+            },
+            {
+                id: 'tabs-5',
+                tabName: 'view profile',
+                desc: 'Duis adipisicing cupidatat voluptate qui commodo consequat sint excepteur pariatur consequat eu et. Labore tempor ut incididunt est ullamco do esse in velit id culpa ut elit non. Qui Lorem pariatur cillum sint occaecat. Elit eu do exercitation proident. Occaecat in minim ea ullamco cupidatat aliquip. Culpa officia magna labore quis elit et elit exercitation enim eu. Labore ex voluptate est commodo exercitation aute mollit fugiat occaecat.',
+                img: '/assets/products_1.png'
+            },
+            {
+                id: 'tabs-6',
+                tabName: 'quick view',
+                desc: 'Dolore consectetur tempor consequat esse cupidatat. Consequat excepteur enim duis reprehenderit ea consectetur incididunt nostrud ea incididunt anim labore nisi ullamco. Do adipisicing consequat elit cupidatat proident et aliqua quis excepteur consectetur. Excepteur eu ad nulla consequat Lorem esse enim ad nisi eiusmod consequat.',
+                img: '/assets/products_1.png'
+            }
+        ]
+    },
+    {
+        id: 'product-3',
+        productName: 'DATA',
+        header: 'Consequat excepteur enim duis reprehenderit ea consectetur',
+        img: '/assets/data_license.png',
+        desc: 'Quis nulla nostrud sint eu. Eu mollit reprehenderit eu',
+        tabs: [
+            {
+                id: 'tabs-7',
+                tabName: 'Visualise view',
+                desc: 'Quis nulla nostrud sint eu. Eu mollit reprehenderit eu quis cillum anim magna consequat non Lorem quis. Sint incididunt tempor nulla in deserunt. Est sint deserunt cillum ipsum adipisicing ex occaecat laborum. Duis cillum commodo esse eiusmod sunt minim magna. Aliqua est amet incididunt veniam magna dolor id reprehenderit dolore exercitation id.',
+                img: '/assets/products_1.png'
+            },
+            {
+                id: 'tabs-8',
+                tabName: 'view profile',
+                desc: 'Laboris laboris aute nostrud laborum cillum commodo exercitation nisi elit fugiat excepteur. Qui esse aute consectetur et proident elit amet adipisicing cillum. Sit enim adipisicing mollit laborum amet occaecat excepteur deserunt enim. Culpa officia ut labore nisi duis nisi aliqua ad consectetur. Aliquip laborum eiusmod Lorem culpa ut velit non officia reprehenderit occaecat.',
+                img: '/assets/products_1.png'
+            },
+            {
+                id: 'tabs-9',
+                tabName: 'quick view',
+                desc: 'Eu ex pariatur laborum reprehenderit adipisicing culpa velit enim anim labore eu. Labore officia enim et ex officia quis proident. Occaecat ad velit esse velit reprehenderit velit minim mollit amet officia ullamco. Elit pariatur sunt et deserunt exercitation dolor.',
+                img: '/assets/products_1.png'
+            }
+        ]
+    }
+]
 
 const HEADER_DATA = [
     {
-        id: uuid(),
+        id: 'header-1',
         name: 'solutions',
+        img: '/assets/solutions.png',
         details: []
     },
     {
-        id: uuid(),
+        id: 'header-2',
         name: 'product',
-        details: []
+        img: '/assets/products_icon.png',
+        details: PRODUCTS_DATA
     },
     {
-        id: uuid(),
+        id: 'header-3',
         name: 'data',
+        img: '/assets/data_icon.png',
         details: []
     },
     {
-        id: uuid(),
+        id: 'header-4',
         name: 'plan',
+        img: '/assets/plan_icon.png',
         details: []
     },
     {
-        id: uuid(),
+        id: 'header-5',
         name: 'research & insights',
+        img: '/assets/research_icon.png',
         details: []
     }
 ]
@@ -175,84 +263,6 @@ const SERVICES_DATA = [
         name: 'RESEARCH & CONSULTING',
         details: 'Aliquip laboris ad pariatur aliquip do commodo dolor. Enim adipisicing veniam irure pariatur aliqua ut aute occaecat exercitation aliqua nulla non aute. Ex esse irure est culpa. Dolor enim dolore proident fugiat.',
         img: '/assets/services_image.png'
-    }
-]
-
-const PRODUCTS_DATA = [
-    {
-        id: 'product-1',
-        productName: 'PLATFORM',
-        header: 'Technological advancements provide a competitive edge',
-        tabs: [
-            {
-                id: 'tabs-1',
-                tabName: 'Visualise view',
-                desc: 'Gather information on international trade in a visually appealing way. Learn about the market trends easily and get all the essential information on the import and export of a country in the form of interactive graphics.',
-                img: '/assets/products_1.png'
-            },
-            {
-                id: 'tabs-2',
-                tabName: 'view profile',
-                desc: 'Ea tempor Lorem excepteur eu aute qui ipsum est cupidatat labore consectetur cillum magna. Pariatur dolor veniam eiusmod veniam quis officia do minim dolor laborum in fugiat. Et tempor Lorem incididunt esse fugiat proident eiusmod magna elit excepteur in aliquip. Eu id enim mollit amet cupidatat consequat dolor et cupidatat in qui consequat deserunt. Est minim id eiusmod laboris culpa cillum mollit commodo fugiat duis dolor.',
-                img: '/assets/products_1.png'
-            },
-            {
-                id: 'tabs-3',
-                tabName: 'quick view',
-                desc: 'Exercitation dolore qui non qui ad minim tempor voluptate ut nostrud consequat magna Lorem quis. Enim tempor sit reprehenderit consectetur anim ea labore labore. Amet non amet id culpa amet deserunt duis eiusmod in eiusmod consequat officia.',
-                img: '/assets/products_1.png'
-            }
-        ]
-    },
-    {
-        id: 'product-2',
-        productName: 'API',
-        header: 'Aliqua sint aliquip ea exercitation id culpa mollit dolor anim.',
-        tabs: [
-            {
-                id: 'tabs-4',
-                tabName: 'Visualise view',
-                desc: 'Gather information on international trade in a visually appealing way. Learn about the market trends easily and get all the essential information on the import and export of a country in the form of interactive graphics.',
-                img: '/assets/products_1.png'
-            },
-            {
-                id: 'tabs-5',
-                tabName: 'view profile',
-                desc: 'Duis adipisicing cupidatat voluptate qui commodo consequat sint excepteur pariatur consequat eu et. Labore tempor ut incididunt est ullamco do esse in velit id culpa ut elit non. Qui Lorem pariatur cillum sint occaecat. Elit eu do exercitation proident. Occaecat in minim ea ullamco cupidatat aliquip. Culpa officia magna labore quis elit et elit exercitation enim eu. Labore ex voluptate est commodo exercitation aute mollit fugiat occaecat.',
-                img: '/assets/products_1.png'
-            },
-            {
-                id: 'tabs-6',
-                tabName: 'quick view',
-                desc: 'Dolore consectetur tempor consequat esse cupidatat. Consequat excepteur enim duis reprehenderit ea consectetur incididunt nostrud ea incididunt anim labore nisi ullamco. Do adipisicing consequat elit cupidatat proident et aliqua quis excepteur consectetur. Excepteur eu ad nulla consequat Lorem esse enim ad nisi eiusmod consequat.',
-                img: '/assets/products_1.png'
-            }
-        ]
-    },
-    {
-        id: 'product-3',
-        productName: 'DATA',
-        header: 'Consequat excepteur enim duis reprehenderit ea consectetur',
-        tabs: [
-            {
-                id: 'tabs-7',
-                tabName: 'Visualise view',
-                desc: 'Quis nulla nostrud sint eu. Eu mollit reprehenderit eu quis cillum anim magna consequat non Lorem quis. Sint incididunt tempor nulla in deserunt. Est sint deserunt cillum ipsum adipisicing ex occaecat laborum. Duis cillum commodo esse eiusmod sunt minim magna. Aliqua est amet incididunt veniam magna dolor id reprehenderit dolore exercitation id.',
-                img: '/assets/products_1.png'
-            },
-            {
-                id: 'tabs-8',
-                tabName: 'view profile',
-                desc: 'Laboris laboris aute nostrud laborum cillum commodo exercitation nisi elit fugiat excepteur. Qui esse aute consectetur et proident elit amet adipisicing cillum. Sit enim adipisicing mollit laborum amet occaecat excepteur deserunt enim. Culpa officia ut labore nisi duis nisi aliqua ad consectetur. Aliquip laborum eiusmod Lorem culpa ut velit non officia reprehenderit occaecat.',
-                img: '/assets/products_1.png'
-            },
-            {
-                id: 'tabs-9',
-                tabName: 'quick view',
-                desc: 'Eu ex pariatur laborum reprehenderit adipisicing culpa velit enim anim labore eu. Labore officia enim et ex officia quis proident. Occaecat ad velit esse velit reprehenderit velit minim mollit amet officia ullamco. Elit pariatur sunt et deserunt exercitation dolor.',
-                img: '/assets/products_1.png'
-            }
-        ]
     }
 ]
 
