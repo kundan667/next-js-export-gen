@@ -16,6 +16,7 @@ body {
   /* height: 3000px; */
   font-family: "Open Sans", sans-serif !important;
   color: rgb(var(--foreground-rgb));
+  background-color: #ffffff;
 }
 
 @layer utilities {
