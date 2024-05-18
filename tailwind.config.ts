@@ -9,12 +9,18 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        "footer-image": "url('/assets/footer_1.png))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      gridTemplateColumns: {
+        // Simple 16 column grid
+
+        // Complex site-specific column configuration
+        'country': '25% 75%',
+      }
     },
   },
-  plugins: [],
+  plugins: [require('daisyui'),],
 };
 export default config;
