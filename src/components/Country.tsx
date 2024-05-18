@@ -39,7 +39,7 @@ const Country: FC<CountryProps> = (props) => {
             <h1 className="text-zinc-500 font-bold text-3xl">195+</h1>
             <h1 className="text-zinc-500 font-bold text-3xl mb-4 sm:m-0">COUNTRIES</h1>
             <div className="uppercase text-black font-bold text-4xl  mb-4 sm:m-0">Import Export Data Online</div>
-            <p className="text-base text-zinc-400">Market Inside Limited has one of the largest online searchable databases of importing and exporting countries, covering over 195 Countries which consist of 54 Detailed Countries, 29 Exclusive Countries, 33 Statistical, 184 Mirror Data, 109 Suez Canal Bill Of Lading Data, 02 Bill Of Lading Data, 190+ Transit Data and 190+ Cargo BL Data countries.</p>
+            <p className="text-base text-zinc-500">Market Inside Limited has one of the largest online searchable databases of importing and exporting countries, covering over 195 Countries which consist of 54 Detailed Countries, 29 Exclusive Countries, 33 Statistical, 184 Mirror Data, 109 Suez Canal Bill Of Lading Data, 02 Bill Of Lading Data, 190+ Transit Data and 190+ Cargo BL Data countries.</p>
             <div className="sm:grid sm:grid-cols-country justify-between items-start my-12">
                 <div className="hidden sm:block">
                     {

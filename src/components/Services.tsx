@@ -46,7 +46,7 @@ const Services: FC<ServiceProps> = (props) => {
                 <img src={serviceDetails.img} className="p-0 sm:pl-8 w-6/6 block sm:hidden" alt="services image" />
                 <div className="pr-8">
                     <span className="text-amber-500 font-semibold border-b-2 border-amber-500">{serviceDetails.name}</span>
-                    <p className="my-4">{serviceDetails.details}</p>
+                    <p className="my-4 text-zinc-500">{serviceDetails.details}</p>
                     <button className="btn bg-gray-500 text-white">READ MORE...</button>
                 </div>
                 <img src={serviceDetails.img} className="p-0 sm:pl-8 w-5/6 hidden sm:block" alt="services image" />

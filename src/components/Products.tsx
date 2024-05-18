@@ -97,7 +97,7 @@ const Products: FC<ProductsProps> = (props) => {
                                     }
                                 </select>
                                 <img src={productDetails?.tabs?.[activeSubIndex]?.img} alt="product image" className="mt-4" />
-                                <p className="pt-8">{productDetails?.tabs?.[activeSubIndex]?.desc}</p>
+                                <p className="pt-8 text-zinc-500">{productDetails?.tabs?.[activeSubIndex]?.desc}</p>
                             </div>
                         </div>
                     ))

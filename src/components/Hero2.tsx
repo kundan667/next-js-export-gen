@@ -12,7 +12,7 @@ const Hero2: FC<Hero2Props> = (props) => {
                     <img src="/assets/video.png" alt="video" />
                 </div>
                 <div className="border-0 sm:border-l border-slate-400 px-8 sm:pl-8">
-                    <p className="mb-6">Get a comprehensive view of international trade between countries to set your businefsfsfsdfsdss in a particular direction and drive growth for your business while keeping up to date with the latest information. Watch the video from Market Inside, providing its introduction with a quick glance at how our services help businesses.</p>
+                    <p className="mb-6 text-zinc-500">Get a comprehensive view of international trade between countries to set your businefsfsfsdfsdss in a particular direction and drive growth for your business while keeping up to date with the latest information. Watch the video from Market Inside, providing its introduction with a quick glance at how our services help businesses.</p>
                     <div className="text-center sm:text-start">
                         <button className="uppercase rounded border font-bold btn bg-amber-500 text-white">Schedule A Demo</button>
                     </div>
