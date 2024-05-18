@@ -4,9 +4,9 @@
 
 :root {}
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {}
-}
+} */
 
 * {
   box-sizing: border-box;
